@@ -1,8 +1,12 @@
 cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
 
+# Get dynamic version and save it to PROJECT_VERSION
+include(cmake/DynamicVersion.cmake)
+get_dynamic_version()
+
 project(
   CPM.cmake
-  VERSION 0.37.0
+  VERSION ${PROJECT_VERSION}
   LANGUAGES NONE
 )
 
